@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.rinchino.api_app.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_group1Fragment"
+            app:destination="@id/group1Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_group2Fragment"
+            app:destination="@id/group2Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_group3Fragment"
+            app:destination="@id/group3Fragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_group4Fragment"
+            app:destination="@id/group4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/group1Fragment"
+        android:name="ru.rinchino.api_app.Group1Fragment"
+        android:label="Group1Fragment" >
+        <action
+            android:id="@+id/action_group1Fragment_to_group2Fragment"
+            app:destination="@id/group2Fragment" />
+        <action
+            android:id="@+id/action_group1Fragment_to_group4Fragment"
+            app:destination="@id/group4Fragment" />
+        <action
+            android:id="@+id/action_group1Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/group2Fragment"
+        android:name="ru.rinchino.api_app.Group2Fragment"
+        android:label="Group2Fragment" >
+        <action
+            android:id="@+id/action_group2Fragment_to_group3Fragment"
+            app:destination="@id/group3Fragment" />
+        <action
+            android:id="@+id/action_group2Fragment_to_group1Fragment"
+            app:destination="@id/group1Fragment" />
+        <action
+            android:id="@+id/action_group2Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/group3Fragment"
+        android:name="ru.rinchino.api_app.Group3Fragment"
+        android:label="Group3Fragment" >
+        <action
+            android:id="@+id/action_group3Fragment_to_group2Fragment"
+            app:destination="@id/group2Fragment" />
+        <action
+            android:id="@+id/action_group3Fragment_to_group4Fragment"
+            app:destination="@id/group4Fragment" />
+        <action
+            android:id="@+id/action_group3Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/group4Fragment"
+        android:name="ru.rinchino.api_app.Group4Fragment"
+        android:label="fragment_group4"
+        tools:layout="@layout/fragment_group4" >
+        <action
+            android:id="@+id/action_group4Fragment_to_group3Fragment"
+            app:destination="@id/group3Fragment" />
+        <action
+            android:id="@+id/action_group4Fragment_to_group1Fragment"
+            app:destination="@id/group1Fragment" />
+        <action
+            android:id="@+id/action_group4Fragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
